@@ -9,7 +9,7 @@ app.use(cors());
 
 //DB configs
 mongoose
-  .connect("mongodb://localhost:27017/mypostsDB")
+  .connect("mongodb://127.0.0.1:27017/CrudDB").then((result) => console.log("Connected to database"))
   .catch((err) => console.log(err));
 
 const postSchema = mongoose.Schema({
